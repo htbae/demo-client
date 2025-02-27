@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'NEXONLv1GothicOTF';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src:
+    local('NEXONLv1GothicOTF'),
+    url('/src/assets/fonts/NEXONLv1GothicOTF-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NEXONLv1GothicOTF';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src:
+    local('NEXONLv1GothicOTF'),
+    url('/src/assets/fonts/NEXONLv1GothicOTF.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NEXONLv1GothicOTF';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src:
+    local('NEXONLv1GothicOTF'),
+    url('/src/assets/fonts/NEXONLv1GothicOTF-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src:
+    local('Pretendard'),
+    url('/src/assets/fonts/Pretendard-Regular.subset.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src:
+    local('Pretendard'),
+    url('/src/assets/fonts/Pretendard-Medium.subset.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src:
+    local('Pretendard'),
+    url('/src/assets/fonts/Pretendard-SemiBold.subset.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src:
+    local('Pretendard'),
+    url('/src/assets/fonts/Pretendard-Bold.subset.woff2') format('woff');
+}

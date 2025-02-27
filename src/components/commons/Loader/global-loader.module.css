@@ -1,0 +1,65 @@
+.global-loader {
+  height: 2px;
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.global-loader .global-loader-fill {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200%;
+  transform: translateX(0);
+  opacity: 0;
+  transition:
+    opacity 1s ease-out,
+    background-position 10s linear;
+  background: linear-gradient(
+    to right,
+    rgba(102, 190, 108, 0.93) 0%,
+    rgba(0, 106, 163, 0.92) 99%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.global-loader::after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.global-loader.is-initing .global-loader-fill {
+  transition: none;
+  opacity: 1;
+  animation: Indeterminate 5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.global-loader.is-loading .global-loader-fill {
+  opacity: 1;
+  animation: GradientShift 10s linear infinite;
+  background-size: 200% 100%;
+  transition: opacity 0.5s ease-out;
+}
+
+@keyframes GradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
+  }
+}

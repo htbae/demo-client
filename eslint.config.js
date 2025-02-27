@@ -11,7 +11,7 @@ import importPlugin from 'eslint-plugin-import'; // import/export 규칙
 export default tseslint.config(
   // 빌드 결과물 폴더 무시
   { ignores: ['dist', 'node_modules'] },
-  {
+  { 
     // TypeScript와 TSX 파일만 린팅 대상으로 지정
     files: ['**/*.{ts,tsx}'],
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
@@ -31,6 +31,7 @@ export default tseslint.config(
         ...globals.browser,
         // React를 전역 변수로 설정 (읽기 전용)
         React: 'readonly',
+        NodeJS : true
       },
       parserOptions: {
         ecmaVersion: 'latest',
@@ -115,8 +116,17 @@ export default tseslint.config(
         },
       ],
 
+      'prettier/prettier': [
+            'error',
+            {
+                endOfLine: 'auto',
+            },
+      ],
+
       // 일치 연산자 강제 (==, != 대신 ===, !== 사용)
       eqeqeq: ['error', 'always'],
+      
     },
+
   }
 );
